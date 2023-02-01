@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Webpage</title>
+</head>
+<body>
+    <center>
+        <h2>Webpage data</h2>
+        <form method="POST">
+            {% csrf_token %}
+            <lable for="topic">select topic:</lable>
+            <select name="topic"id="topic">
+                {% for t in QST %}
+                     <option value="{{t}}">{{t.topic_name}}</option>
+                {% endfor %}
+            </select><br>
+            <input type="text"name='name'id='name'placeholder='enter name'/><br>
+            <input type="url" name="url" id="url"placeholder='enter url here'><br>
+            <input type="submit">  
+        </form>
+    </center>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        tr,td,table{
+            background-color: aqua;
+            color:green;
+        }
+        th{
+            color:black;
+        }
+        fieldset,legend{
+            background-color: goldenrod;
+        }
+    </style>
+  
+    <title>topic_data</title>
+</head>
+<body>
+    <center>
+        <fieldset style="width: fit-content;border:solid blue;">
+            <legend style="text-align:center;color:red;">topic_data</legend>
+        
+            <table border="2px">
+                <tr>
+                    <th>topic_name</th>
+                </tr>
+                {% for T in QST %}
+                <tr>
+                    <td>{{T.topic_name}}</td>
+                </tr>
+                {% endfor %}
+            </table>
+       </fieldset>
+    </center>
+</body>
+</html>

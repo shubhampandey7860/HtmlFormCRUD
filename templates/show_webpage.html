@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Webpage data</title>
+    <style>
+        tr,td,table{
+            background-color: aqua;
+            color:green;
+        }
+        th{
+            color:black;
+        }
+        fieldset,legend{
+            background-color: goldenrod;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <fieldset style="width: fit-content;border:solid blue;">
+            <legend style="text-align:center;color:red;">Webpage data</legend>
+        <table border="2px">
+            <tr>
+                <th>topic_name</th>
+                <th>name</th>
+                <th>url</th>
+            </tr>
+            {% for w in QSW %}
+              <tr>
+                <td>{{w.topic_name}}</td>
+                <td>{{w.name}}</td>
+                <td>{{w.url}}</td>
+              </tr>
+            {% endfor %}  
+        </table>
+        </fieldset>
+    </center>
+</body>
+</html>
